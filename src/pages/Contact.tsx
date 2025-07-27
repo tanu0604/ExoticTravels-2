@@ -277,9 +277,10 @@ const Contact: React.FC = () => {
                         Our Office
                       </h3>
                       <p className="text-gray-700">
-                        123 Park Street
+                        GD-36, 1312 Rajdanga Main Road Behind Mahasweta Devi
+                        Shangraha Shala Rashbehari Avenue Connector,
                         <br />
-                        Kolkata, West Bengal 700016
+                        Kolkata, West Bengal 700107
                         <br />
                         India
                       </p>
@@ -293,9 +294,9 @@ const Contact: React.FC = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
                       <p className="text-gray-700">
-                        +91 98765 43210
+                        +91 90880 19480
                         <br />
-                        +91 33 2234 5678
+                        +91 80166 05108{" "}
                       </p>
                     </div>
                   </div>
@@ -307,9 +308,9 @@ const Contact: React.FC = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
                       <p className="text-gray-700">
-                        info@exotictravels.com
+                        contact.exotictravels@gmail.com
                         <br />
-                        bookings@exotictravels.com
+                        support.exotictravels@gmail.com
                       </p>
                     </div>
                   </div>

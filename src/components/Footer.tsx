@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
                     GD-36, 1312 Rajdanga Main Road Behind Mahasweta Devi
                     Shangraha Shala Rashbehari Avenue Connector, Kolkata
                     <br />
-                    West Bengal 700016
+                    West Bengal 700107
                   </p>
                 </div>
               </div>
@@ -220,10 +220,10 @@ const Footer: React.FC = () => {
               </p>
               <p className="text-gray-400 text-xs mt-2 text-center">
                 Powered by{" "}
-                <span className="font-semibold text-amber-400">
-                  ExoticTravels
+                <span className="font-semibold text-purple-400">
+                  ClickMorph
                 </span>{" "}
-                — Your Gateway to Memorable Journeys
+                — Marketing and AI Automation
               </p>
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
