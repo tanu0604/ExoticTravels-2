@@ -218,19 +218,18 @@ const Footer: React.FC = () => {
               <p className="text-gray-400 text-sm">
                 © 2024 Exotic Travels. All rights reserved.
               </p>
-           <p className="text-gray-400 text-xs mt-2 text-center">
-  Powered by{" "}
-  <a
-    href="https://clickmorph.org"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold text-purple-400 hover:underline"
-  >
-    ClickMorph
-  </a>{" "}
-  — Marketing and AI Automation
-</p>
-
+              <p className="text-gray-400 text-xs mt-2 text-center">
+                Powered by{" "}
+                <a
+                  href="https://clickmorph.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-purple-400 hover:underline"
+                >
+                  ClickMorph
+                </a>{" "}
+                — Marketing and AI Automation
+              </p>
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
