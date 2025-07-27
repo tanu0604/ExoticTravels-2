@@ -163,44 +163,55 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
-              Meet Our Team
-            </h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              Our dedicated team of travel experts is passionate about creating
-              extraordinary experiences for our clients
-            </p>
-          </div>
+    {/* Team Section */}
+<section className="py-16 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
+        Meet Our Team
+      </h2>
+      <p className="text-gray-700 max-w-2xl mx-auto">
+        Our dedicated team of travel experts is passionate about creating
+        extraordinary experiences for our clients
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[...Array(1)].map((_, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-2xl shadow-xl text-center border border-blue-100"
-              >
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold font-serif">
-                    CG
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">
-                  Chanchal Ghosh
-                </h3>
-                <p className="text-gray-700 mb-2">Operations (International)</p>
-                <p className="text-gray-500 text-sm">
-                  Chanchal has been leading international operations at Exotic
-                  Travels since March 2025, ensuring seamless travel experiences
-                  across borders with dedication and efficiency.
-                </p>
-              </div>
-            ))}
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {/* Member 1 */}
+      <div className="bg-white p-6 rounded-2xl shadow-xl text-center border border-blue-100">
+        <div className="w-24 h-24 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span className="text-white text-2xl font-bold font-serif">CG</span>
         </div>
-      </section>
+        <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">
+          Chanchal Ghosh
+        </h3>
+        <p className="text-gray-700 mb-2">Operations (International)</p>
+        <p className="text-gray-500 text-sm">
+          Chanchal has been leading international operations at Exotic Travels
+          since March 2025, ensuring seamless travel experiences across borders
+          with dedication and efficiency.
+        </p>
+      </div>
+
+      {/* Member 2 */}
+      <div className="bg-white p-6 rounded-2xl shadow-xl text-center border border-blue-100">
+        <div className="w-24 h-24 bg-gradient-to-r from-pink-400 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span className="text-white text-2xl font-bold font-serif">RD</span>
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">
+          Reshmi Dutta
+        </h3>
+        <p className="text-gray-700 mb-2">Operations Manager (Domestic)</p>
+        <p className="text-gray-500 text-sm">
+          Reshmi has been managing domestic operations at Exotic Travels since
+          January 2023, delivering top-notch experiences with care and
+          efficiency.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
