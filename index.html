@@ -36,28 +36,41 @@
 <body>
   <div id="root"></div>
 
-  <div style="width: 80px; height: 80px;" id="VG_OVERLAY_CONTAINER">
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
+  <!-- ✅ Updated Voiceglow Chatbot Code -->
+  <div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
+    <!-- Here is where CONVOCORE renders the widget. -->
+    <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
+  </div>
+
+  <!-- Remove 'defer' if you want widget to load faster (Will affect website loading) -->
+  <script defer>
+    (function () {
       window.VG_CONFIG = {
-        ID: "4XwVtMhkglCmn9P9t59e", // ✅ Your actual widget ID
-        region: "na", // 'na' for North America or 'eu' for Europe
+        ID: "ELETUawRwoxMaokivIxF", // YOUR AGENT ID
+        region: 'na', // YOUR ACCOUNT REGION 
         render: 'bottom-left', // Widget position
-        autostart: true, // auto-open the chat on load
+        // modalMode: true, // Set this to 'true' to open the widget in modal mode
         stylesheets: [
           "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css"
-        ]
+        ],
+        // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
+        // user: {
+        //     name: 'John Doe',
+        //     email: 'johndoe@gmail.com',
+        //     phone: '+1234567890',
+        // }
+        // Optional user data -- end
+        // **
+        // userID: 'USER_ID',
+        // autostart: true,
       };
-
-      const script = document.createElement("script");
-      script.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
-      document.body.appendChild(script);
-    });
+      var VG_SCRIPT = document.createElement("script");
+      VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+      VG_SCRIPT.defer = true;
+      document.body.appendChild(VG_SCRIPT);
+    })();
   </script>
 
-</div>
-  <!-- ✅ Voiceglow Chatbot Integration -->
- 
   <!-- ✅ React App Entry -->
   <script type="module" src="/src/main.tsx"></script>
 </body>
