@@ -32,25 +32,22 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/XoticTravel/"
+                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/xotic.travels/"
+                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
+          
               <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.youtube.com/@exotictravels3467/featured "
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Youtube className="h-5 w-5" />

@@ -209,14 +209,18 @@ const Home: React.FC = () => {
                 <ArrowRight className="h-5 w-5 transition-transform duration-500 group-hover:translate-x-2" />
               </Link>
             </div>
-            <button className="group flex items-center space-x-3 text-white hover:text-blue-300 transition-all duration-500">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm border border-blue-400/30 rounded-full flex items-center justify-center group-hover:bg-blue-400/20 transition-all duration-500 shadow-lg">
-                <Play className="h-6 w-6 ml-1" />
-              </div>
-              <span className="text-lg font-medium font-serif">
-                Watch Our Story
-              </span>
-            </button>
+            <a
+  href="https://www.youtube.com/watch?v=wemU15U26aI"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex items-center space-x-3 text-white hover:text-blue-300 transition-all duration-500"
+>
+  <div className="w-16 h-16 bg-white/10 backdrop-blur-sm border border-blue-400/30 rounded-full flex items-center justify-center group-hover:bg-blue-400/20 transition-all duration-500 shadow-lg">
+    <Play className="h-6 w-6 ml-1" />
+  </div>
+  <span className="text-lg font-medium font-serif">Watch Our Story</span>
+</a>
+
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -277,7 +281,6 @@ const Home: React.FC = () => {
           ))}
         </div>
       </section>
-
       <About />
       {/* Featured Indian Destinations */}
       <section className="section-padding bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] border-t border-b border-blue-100">

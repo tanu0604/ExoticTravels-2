@@ -390,7 +390,7 @@ const Contact: React.FC = () => {
 
           <div className="bg-gray-200 rounded-lg overflow-hidden h-96 border-4 border-yellow-100 shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0948736935893!2d88.35175731498124!3d22.574148785178543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277aa3e4d1f9d%3A0x2b5e1b2a2b5e1b2a!2sPark%20Street%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1647853647789!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.5265306894236!2d88.39278511498164!3d22.594992985165487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773f2ae6a2c9%3A0x9b7643a62fbdc63b!2sGD-36%2C%201312%20Rajdanga%20Main%20Rd%2C%20Behind%20Mahasweta%20Devi%20Shangraha%20Shala%2C%20Rashbehari%20Avenue%20Connector%2C%20Kolkata%2C%20West%20Bengal%20700107!5e0!3m2!1sen!2sin!4v1722165402001!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -398,7 +398,7 @@ const Contact: React.FC = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Exotic Travels Office Location"
-            ></iframe>
+            />
           </div>
         </div>
       </section>

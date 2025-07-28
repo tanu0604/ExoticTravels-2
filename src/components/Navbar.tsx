@@ -29,6 +29,9 @@ const Navbar: React.FC = () => {
 
   return (
     <>
+ {/* Scrolling Banner */}
+ 
+
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
@@ -161,6 +164,7 @@ const Navbar: React.FC = () => {
           </div>
         </a>
       </div>
+
     </>
   );
 };

@@ -180,7 +180,7 @@ export const destinations: Destination[] = [
       'Visit Tawang Monastery, Sela Pass, and Jaswant Garh War Memorial',
       'Experience tribal culture and untouched natural beauty'
     ],
-    gallery: [arunachal1,arunachal2,arunachal3],
+    gallery: [arunachal1, arunachal2, arunachal3],
     bestTime: 'October to April',
     packages: [
       {
@@ -223,7 +223,7 @@ export const destinations: Destination[] = [
       'Cellular Jail, Radhanagar Beach, and coral reefs exploration',
       'Ferry rides between islands and water adventure activities'
     ],
-    gallery: [andaman1,andaman2,andaman3],
+    gallery: [andaman1, andaman2, andaman3],
     bestTime: 'October to May',
     packages: [
       {
@@ -265,7 +265,7 @@ export const destinations: Destination[] = [
       'Mall Road, Kufri, Solang Valley, and Hidimba Temple',
       'Ideal for honeymooners, families, and adventure lovers'
     ],
-    gallery: [manali1,manali2,manali3],
+    gallery: [manali1, manali2, manali3],
     bestTime: 'March to June and October to February',
     packages: [
       {
@@ -305,7 +305,7 @@ export const destinations: Destination[] = [
       'Khardung La Pass, Pangong Lake, and Diskit Monastery',
       'Camel ride in Hunder dunes and unique cultural immersion'
     ],
-    gallery: [ladakh1,ladakh2,ladakh3],
+    gallery: [ladakh1, ladakh2, ladakh3],
     bestTime: 'May to September',
     packages: [
       {
@@ -346,7 +346,7 @@ export const destinations: Destination[] = [
       'Tea plantations, Periyar Wildlife Sanctuary, and serene backwaters',
       'Relaxing beach time and traditional Kerala cuisine'
     ],
-    gallery: [kerela1,kerela2,kerela3],
+    gallery: [kerela1, kerela2, kerela3],
     bestTime: 'October to March',
     packages: [
       {
@@ -388,7 +388,7 @@ export const destinations: Destination[] = [
       '2 nights in South Goa and 2 nights in North Goa',
       'Water sports, forts, churches, and beachside shacks',
     ],
-    gallery: [goa1,goa2,goa3],
+    gallery: [goa1, goa2, goa3],
     bestTime: 'November to February',
     packages: [],
     faqs: [
@@ -415,7 +415,7 @@ export const destinations: Destination[] = [
       '2 nights in Murti and 2 nights in Jaldapara',
       'Jeep safaris, tea estates, and river walks',
     ],
-    gallery: [dooars1,dooars2,dooars3],
+    gallery: [dooars1, dooars2, dooars3],
     bestTime: 'October to March',
     packages: [],
     faqs: [
@@ -441,7 +441,7 @@ export const destinations: Destination[] = [
       '3 nights in Shillong, 1 night in Cherrapunji',
       'Waterfalls, caves, and double-decker root bridges',
     ],
-    gallery: [meghalaya1,meghalaya2,meghalaya3],
+    gallery: [meghalaya1, meghalaya2, meghalaya3],
     bestTime: 'October to April',
     packages: [],
     faqs: [
@@ -467,7 +467,7 @@ export const destinations: Destination[] = [
       '2 nights in Lamahatta and 2 nights in Lolegaon',
       'Village walks, homestay experiences, and forest trails',
     ],
-    gallery: [bengal1,bengal2],
+    gallery: [bengal1, bengal2],
     bestTime: 'March to June, October to December',
     packages: [],
     faqs: [
@@ -493,7 +493,7 @@ export const destinations: Destination[] = [
       'Dal Lake shikara rides, Mughal Gardens, and Pahalgam valley views',
       'Perfect for romantic escapes and scenic tranquility'
     ],
-    gallery: [kashmir1,kashmir2,kashmir3],
+    gallery: [kashmir1, kashmir2, kashmir3],
     bestTime: 'April to October',
     packages: [
       {
@@ -518,6 +518,101 @@ export const destinations: Destination[] = [
     ]
   },
 
+  
+  {
+    id: 'kenya-masaimara',
+    name: 'Kenya (Masai Mara)',
+    image: kenya, // Replace with actual image import or path
+    price: '₹2,26,000',
+    duration: '7 Days 6 Nights',
+    description: '',
+    category: 'foreign',
+    region: 'Africa',
+    type: 'Safari + Nature',
+    overview: 'Kenya’s Masai Mara is the crown jewel of African safaris — a vast savannah where wildlife roams free and breathtaking sunsets light up the horizon. From thrilling game drives to encounters with the Big Five, this is your gateway to untamed adventure and cultural richness.',
+    highlights: [
+      'Witness the Great Migration (Jul–Oct)',
+      'Game drives with chances to see the Big Five',
+      'Cultural visits to Masai villages'
+    ],
+    gallery: [kenya1, kenya2, kenya3], // You can add image URLs or imports here
+    bestTime: 'July to October',
+    packages: [
+      {
+        name: 'Masai Mara Safari Adventure',
+        duration: '7 Days 6 Nights',
+        price: '',
+        inclusions: [
+          '2 Nights in Nairobi',
+          '3 Nights in Masai Mara with safari drives',
+          'Park entry fees and guided tours'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: 'Is a visa required for Indian citizens to visit Kenya?',
+        answer: 'Yes, Indian citizens must apply for an eVisa online before traveling to Kenya.'
+      },
+      {
+        question: 'What is the Masai Mara famous for?',
+        answer: 'Masai Mara is renowned for its incredible wildlife, especially the annual Great Migration of wildebeests and zebras.'
+      },
+      {
+        question: 'Is it safe to go on a safari in Kenya?',
+        answer: 'Yes, it is generally safe when done with licensed operators and guides. Always follow safety instructions during the trip.'
+      }
+    ]
+  },
+
+  {
+    id: 'egypt-nilecairo',
+    name: 'Egypt (Cairo & Nile Cruise)',
+    image: egypt, // Replace with actual image import or path
+    price: 'Customizable',
+    duration: '7 Days 6 Nights',
+    description: '',
+    category: 'foreign',
+    region: 'Africa',
+    type: 'History + Culture + Cruise',
+    overview: 'Step into the land of pharaohs, pyramids, and the mighty Nile. Egypt offers an unforgettable journey through ancient history and modern marvels — from the bustling streets of Cairo to the serene beauty of a Nile cruise, this trip is a blend of exploration and enchantment.',
+    highlights: [
+      'Explore the Pyramids of Giza and the Sphinx',
+      'Visit the Egyptian Museum with Tutankhamun’s treasures',
+      'Relax on a luxury Nile River cruise with guided tours to Luxor and Aswan',
+      'Sound and Light Show at the Pyramids'
+    ],
+    gallery: [egypt1, egypt2, egypt3], // Add image imports or paths here
+    bestTime: 'October to April',
+    packages: [
+      {
+        name: 'Discover Egypt: Cairo & The Nile',
+        duration: '7 Days 6 Nights',
+        price: 'Customizable',
+        inclusions: [
+          '3 Nights in Cairo with breakfast',
+          '4 Nights on Nile Cruise (full board)',
+          'All airport transfers',
+          'Guided tours with English-speaking Egyptologist',
+          'Domestic flight Cairo–Aswan & Luxor–Cairo'
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: 'Is a visa required for Indian citizens to visit Egypt?',
+        answer: 'Yes, Indian citizens must apply for a tourist visa before traveling to Egypt.'
+      },
+      {
+        question: 'Is Egypt safe for tourists?',
+        answer: 'Yes, Egypt is generally safe for tourists, especially in tourist areas. Always follow local guidelines and travel advisories.'
+      },
+      {
+        question: 'What currency is used in Egypt?',
+        answer: 'The official currency is the Egyptian Pound (EGP). US Dollars and Euros are also widely accepted in tourist areas.'
+      }
+    ]
+  },
   {
     id: 'nepal',
     name: 'Nepal',
@@ -534,7 +629,7 @@ export const destinations: Destination[] = [
       'Pashupatinath Temple',
       'Scenic views of the Himalayas'
     ],
-    gallery: [nepal1,nepal2,nepal3],
+    gallery: [nepal1, nepal2, nepal3],
     bestTime: 'October to April',
     packages: [
       {
@@ -575,7 +670,7 @@ export const destinations: Destination[] = [
       'Visit the Temple of the Tooth',
       'Explore tea plantations and beaches'
     ],
-    gallery: [srilanka1,srilanka2,srilanka3],
+    gallery: [srilanka1, srilanka2, srilanka3],
     bestTime: 'December to April',
     packages: [
       {
@@ -622,7 +717,7 @@ export const destinations: Destination[] = [
       'Sentosa Island adventures',
       'Shopping at Orchard Road'
     ],
-    gallery: [singapore2,singapore1,singapore3],
+    gallery: [singapore2, singapore1, singapore3],
     bestTime: 'February to April',
     packages: [
       {
@@ -665,7 +760,7 @@ export const destinations: Destination[] = [
       'Batu Caves and local markets',
       'Cultural exploration in Kuala Lumpur'
     ],
-    gallery: [malaysia1,malaysia2,malaysia3],
+    gallery: [malaysia1, malaysia2, malaysia3],
     bestTime: 'December to April',
     packages: [
       {
@@ -708,7 +803,7 @@ export const destinations: Destination[] = [
       'Desert Safari with BBQ dinner',
       'Dhow Cruise and Marina Walk'
     ],
-    gallery: [dubai1,dubai2,dubai3],
+    gallery: [dubai1, dubai2, dubai3],
     bestTime: 'November to March',
     packages: [
       {
@@ -749,7 +844,7 @@ export const destinations: Destination[] = [
       'Explore Ubud\'s rice terraces and temples',
       'Traditional Balinese culture and cuisine'
     ],
-    gallery: [bali1,bali2,bali3],
+    gallery: [bali1, bali2, bali3],
     bestTime: 'April to October',
     packages: [
       {
@@ -795,7 +890,7 @@ export const destinations: Destination[] = [
       'Island hopping in Krabi and Phuket',
       'Street food, nightlife, and Thai massages'
     ],
-    gallery: [thailand1,thailand2,thailand3],
+    gallery: [thailand1, thailand2, thailand3],
     bestTime: 'November to April',
     packages: [
       {
@@ -849,7 +944,7 @@ export const destinations: Destination[] = [
       'Explore the Old Quarter of Hanoi',
       'Relax at the beaches of Danang'
     ],
-    gallery: [veitnam1,veitnam2,veitnam3],
+    gallery: [veitnam1, veitnam2, veitnam3],
     bestTime: 'March to April and September to November',
     packages: [
       {
@@ -894,7 +989,7 @@ export const destinations: Destination[] = [
       'Luxury stays on private islands',
       'Sunset views and serene beach walks'
     ],
-    gallery: [maldives1,maldives2,maldives3],
+    gallery: [maldives1, maldives2, maldives3],
     bestTime: 'November to April',
     packages: [
       {
@@ -921,104 +1016,6 @@ export const destinations: Destination[] = [
       }
     ]
   },
-
-  {
-    id: 'kenya-masaimara',
-    name: 'Kenya (Masai Mara)',
-    image: kenya, // Replace with actual image import or path
-    price: '₹2,26,000',
-    duration: '7 Days 6 Nights',
-    description: '',
-    category: 'foreign',
-    region: 'Africa',
-    type: 'Safari + Nature',
-    overview: 'Kenya’s Masai Mara is the crown jewel of African safaris — a vast savannah where wildlife roams free and breathtaking sunsets light up the horizon. From thrilling game drives to encounters with the Big Five, this is your gateway to untamed adventure and cultural richness.',
-    highlights: [
-      'Witness the Great Migration (Jul–Oct)',
-      'Game drives with chances to see the Big Five',
-      'Cultural visits to Masai villages'
-    ],
-    gallery: [kenya1,kenya2,kenya3], // You can add image URLs or imports here
-    bestTime: 'July to October',
-    packages: [
-      {
-        name: 'Masai Mara Safari Adventure',
-        duration: '7 Days 6 Nights',
-        price: '',
-        inclusions: [
-          '2 Nights in Nairobi',
-          '3 Nights in Masai Mara with safari drives',
-          'Park entry fees and guided tours'
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: 'Is a visa required for Indian citizens to visit Kenya?',
-        answer: 'Yes, Indian citizens must apply for an eVisa online before traveling to Kenya.'
-      },
-      {
-        question: 'What is the Masai Mara famous for?',
-        answer: 'Masai Mara is renowned for its incredible wildlife, especially the annual Great Migration of wildebeests and zebras.'
-      },
-      {
-        question: 'Is it safe to go on a safari in Kenya?',
-        answer: 'Yes, it is generally safe when done with licensed operators and guides. Always follow safety instructions during the trip.'
-      }
-    ]
-  },
-
-  {
-  id: 'egypt-nilecairo',
-  name: 'Egypt (Cairo & Nile Cruise)',
-  image: egypt, // Replace with actual image import or path
-  price: 'Customizable',
-  duration: '7 Days 6 Nights',
-  description: '',
-  category: 'foreign',
-  region: 'Africa',
-  type: 'History + Culture + Cruise',
-  overview: 'Step into the land of pharaohs, pyramids, and the mighty Nile. Egypt offers an unforgettable journey through ancient history and modern marvels — from the bustling streets of Cairo to the serene beauty of a Nile cruise, this trip is a blend of exploration and enchantment.',
-  highlights: [
-    'Explore the Pyramids of Giza and the Sphinx',
-    'Visit the Egyptian Museum with Tutankhamun’s treasures',
-    'Relax on a luxury Nile River cruise with guided tours to Luxor and Aswan',
-    'Sound and Light Show at the Pyramids'
-  ],
-  gallery: [egypt1, egypt2, egypt3], // Add image imports or paths here
-  bestTime: 'October to April',
-  packages: [
-    {
-      name: 'Discover Egypt: Cairo & The Nile',
-      duration: '7 Days 6 Nights',
-      price: 'Customizable',
-      inclusions: [
-        '3 Nights in Cairo with breakfast',
-        '4 Nights on Nile Cruise (full board)',
-        'All airport transfers',
-        'Guided tours with English-speaking Egyptologist',
-        'Domestic flight Cairo–Aswan & Luxor–Cairo'
-      ]
-    }
-  ],
-  faqs: [
-    {
-      question: 'Is a visa required for Indian citizens to visit Egypt?',
-      answer: 'Yes, Indian citizens must apply for a tourist visa before traveling to Egypt.'
-    },
-    {
-      question: 'Is Egypt safe for tourists?',
-      answer: 'Yes, Egypt is generally safe for tourists, especially in tourist areas. Always follow local guidelines and travel advisories.'
-    },
-    {
-      question: 'What currency is used in Egypt?',
-      answer: 'The official currency is the Egyptian Pound (EGP). US Dollars and Euros are also widely accepted in tourist areas.'
-    }
-  ]
-}
-
-
-
 ];
 
 export const testimonials: Testimonial[] = [
