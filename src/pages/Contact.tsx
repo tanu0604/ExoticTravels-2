@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true); // start loading
-
+  
     if (formRef.current) {
       emailjs
         .sendForm(
@@ -29,8 +29,42 @@ const Contact: React.FC = () => {
           "Uzdhj7xCu17hCqdw7"
         )
         .then(
-          (result) => {
+          async (result) => {
             console.log(result.text);
+  
+            try {
+              const airtableResponse = await fetch(
+                "https://api.airtable.com/v0/appQ5ZaotsL7U9aaL/Table%201",
+                {
+                  method: "POST",
+                  headers: {
+                    Authorization: "Bearer patOCFWb90OPNGWZv.9073fc9bfff54f507b29f46e60be6f80788249c4f67c4a3a64207c8a83fdfccf",
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    fields: {
+                      name: formData.name,
+                      email: formData.email,
+                      query: formData.message,
+                      status: "false",
+                    },
+                  }),
+                }
+              );
+            
+              const data = await airtableResponse.json();
+            
+              if (!airtableResponse.ok) {
+                console.error("Airtable error:", data);
+                throw new Error("Failed to add to Airtable");
+              }
+            
+              console.log("✅ Airtable response:", data);
+            } catch (err) {
+              console.error("❌ Airtable submission failed:", err);
+            }
+            
+  
             toast.success(
               "🎉 Thank you for your inquiry! We’ll reply within 24 hours."
             );
@@ -51,7 +85,7 @@ const Contact: React.FC = () => {
         .finally(() => setLoading(false)); // stop loading
     }
   };
-
+  
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -384,8 +418,9 @@ const Contact: React.FC = () => {
               Visit Our Office
             </h2>
             <p className="text-gray-700">
-              Located in the heart of Kolkata, Park Street
-            </p>
+            GD-36, 1312 Rajdanga Main Road Behind Mahasweta Devi Shangraha Shala Rashbehari Avenue Connector,
+Kolkata, West Bengal 700107
+India            </p>
           </div>
 
           <div className="bg-gray-200 rounded-lg overflow-hidden h-96 border-4 border-yellow-100 shadow-xl">
