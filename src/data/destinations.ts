@@ -106,16 +106,7 @@ import veitnam2 from "./assests/vietnam/2.jpg"
 import veitnam3 from "./assests/vietnam/3.jpg"
 
 
-// import bali from "./assests/bali.jpeg"
-// import thailand from "./assests/thailand.jpeg"
-// import singapore from "./assests/singapore.jpeg"
-// import maldives from "./assests/maldives.jpeg"
-// import dubai from "./assests/dubai.jpeg"
-// import nepal from "./assests/nepal.jpeg"
-// import srilanka from "./assests/srilanka.jpeg"
-// import vietnam from "./assests/vietnam.jpeg"
-// import malaysia from "./assests/malaysia.jpeg"
-// import kenya from "./assests/kenya.jpg"
+
 export interface Destination {
   id: string;
   name: string;
@@ -172,7 +163,7 @@ export const destinations: Destination[] = [
     duration: '6 Nights 7 Days',
     description: '',
     category: 'indian',
-    region: 'Northeast',
+    region: 'East',
     type: 'Mountain',
     overview: 'A serene Himalayan state known for its monasteries, mountain passes, and the scenic beauty of Tawang Valley.',
     highlights: [
@@ -434,7 +425,7 @@ export const destinations: Destination[] = [
     duration: '5 Days 4 Nights',
     description: 'Lush green landscapes, waterfalls, and living root bridges.',
     category: 'indian',
-    region: 'Northeast',
+    region: 'East',
     type: 'Nature',
     overview: 'Known as the abode of clouds, Meghalaya stuns with crystal-clear rivers, caves, and vibrant local culture.',
     highlights: [
@@ -528,7 +519,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Africa',
-    type: 'Safari + Nature',
+    type: 'Adventure',
     overview: 'Kenya’s Masai Mara is the crown jewel of African safaris — a vast savannah where wildlife roams free and breathtaking sunsets light up the horizon. From thrilling game drives to encounters with the Big Five, this is your gateway to untamed adventure and cultural richness.',
     highlights: [
       'Witness the Great Migration (Jul–Oct)',
@@ -574,7 +565,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Africa',
-    type: 'History + Culture + Cruise',
+    type: 'Adventure',
     overview: 'Step into the land of pharaohs, pyramids, and the mighty Nile. Egypt offers an unforgettable journey through ancient history and modern marvels — from the bustling streets of Cairo to the serene beauty of a Nile cruise, this trip is a blend of exploration and enchantment.',
     highlights: [
       'Explore the Pyramids of Giza and the Sphinx',
@@ -622,7 +613,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Asia',
-    type: 'Culture',
+    type: 'Mountains',
     overview: 'Nepal is a serene Himalayan nation known for its ancient temples, snow-capped peaks, and vibrant culture. From the bustling streets of Kathmandu to the spiritual calm of monasteries and scenic mountain views, Nepal offers a blend of adventure and peace. It’s a paradise for trekkers and spiritual seekers alike.',
     highlights: [
       'Kathmandu sightseeing',
@@ -710,7 +701,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Asia',
-    type: 'City',
+    type: 'Family',
     overview: 'Singapore is a futuristic urban paradise, blending modern architecture with vibrant cultural districts and lush green spaces. With its world-class attractions like Marina Bay Sands, Sentosa Island, and Gardens by the Bay, it offers a unique fusion of entertainment, shopping, and cultural diversity.',
     highlights: [
       'Marina Bay Sands & Gardens by the Bay',
@@ -753,7 +744,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Asia',
-    type: 'City',
+    type: 'Family',
     overview: 'Malaysia is a melting pot of cultures, combining vibrant cities, lush rainforests, and golden beaches. From the iconic Petronas Towers in Kuala Lumpur to the cultural richness of Penang and the beauty of Langkawi, Malaysia offers a perfect balance of modernity and tradition.',
     highlights: [
       'Petronas Twin Towers',
@@ -796,7 +787,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Middle East',
-    type: 'City',
+    type: 'Family',
     overview: 'Dubai is a dazzling desert city known for its futuristic skyscrapers, luxury shopping, and vibrant nightlife. It offers a blend of modern marvels and cultural heritage, from the towering Burj Khalifa to traditional souks and desert safaris.',
     highlights: [
       'Burj Khalifa & Dubai Mall',
@@ -837,7 +828,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Asia',
-    type: 'Island',
+    type: 'Honeymoon',
     overview: 'Bali, the “Island of the Gods,” is a breathtaking Indonesian paradise famous for its vibrant culture, serene beaches, lush rice terraces, and sacred temples. It blends relaxation with adventure — from surfing on Kuta’s waves to meditating in Ubud’s jungles. Known for its warm hospitality, tropical vibes, and spiritual essence, Bali attracts honeymooners, families, and solo explorers alike. Whether you seek beachside bliss, cultural experiences, or rejuvenating retreats, Bali offers something magical for everyone.',
     highlights: [
       'Relax on Kuta Beach',
@@ -882,7 +873,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Asia',
-    type: 'Beach + City',
+    type: 'Honeymoon',
     overview: 'Thailand is a diverse destination offering a perfect blend of vibrant city life, cultural landmarks, and exotic beaches. From the bustling streets and temples of Bangkok to the lively beaches of Pattaya, and the scenic islands of Phuket and Krabi, Thailand promises unforgettable experiences for every kind of traveler. Enjoy water sports, island hopping, street food adventures, and vibrant nightlife in this tropical paradise.',
     highlights: [
       'Grand Palace and temples in Bangkok',
@@ -937,7 +928,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Asia',
-    type: 'Culture',
+    type: 'Adventure',
     overview: 'Vietnam is a stunning blend of natural beauty and deep cultural heritage. From the bustling streets of Hanoi to the tranquil waters of Halong Bay and the charming coastal vibes of Danang, Vietnam offers travelers a journey through history, flavor, and breathtaking landscapes. It’s ideal for those seeking a mix of adventure, tradition, and scenic serenity.',
     highlights: [
       'Cruise the emerald waters of Halong Bay',
@@ -982,7 +973,7 @@ export const destinations: Destination[] = [
     description: '',
     category: 'foreign',
     region: 'Asia',
-    type: 'Island',
+    type: 'Honeymoon',
     overview: 'The Maldives is a breathtaking tropical paradise in the Indian Ocean, renowned for its crystal-clear waters, pristine white-sand beaches, and luxurious overwater villas. Comprising over 1,000 coral islands, it offers a serene escape for travelers seeking relaxation, adventure, or romance. ',
     highlights: [
       'Snorkeling and diving in coral-rich waters',
