@@ -276,7 +276,7 @@ const DestinationDetail: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white py-2 rounded-lg font-bold border-2 border-blue-400 transition">
+                  <button  onClick={() => window.location.href = '/contact'} className="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white py-2 rounded-lg font-bold border-2 border-blue-400 transition">
                     Book Now
                   </button>
                 </div>
