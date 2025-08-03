@@ -210,7 +210,7 @@ const Home: React.FC = () => {
               </Link>
             </div>
             <a
-  href="https://www.youtube.com/watch?v=wemU15U26aI"
+  href="https://www.youtube.com/watch?v=LZ0BqgsYEIg"
   target="_blank"
   rel="noopener noreferrer"
   className="group flex items-center space-x-3 text-white hover:text-blue-300 transition-all duration-500"
