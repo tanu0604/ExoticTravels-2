@@ -17,7 +17,7 @@ const BlogPost: React.FC = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen pt-20 flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="text-center animate-bounce-in">
           <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
             <Calendar className="h-16 w-16 text-blue-600" />
@@ -273,9 +273,9 @@ const BlogPost: React.FC = () => {
   const fullContent = getFullContent(post.id);
 
   return (
-    <div className="min-h-screen pt-20 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0]">
+    <div className="min-h-screen bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0]">
       {/* Breadcrumb */}
-      <div className="bg-white shadow-sm border-b border-yellow-100">
+      <div className="bg-white shadow-sm border-b border-yellow-100 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <Link to="/" className="hover:text-yellow-600 transition-colors">

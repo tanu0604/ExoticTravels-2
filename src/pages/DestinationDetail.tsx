@@ -32,7 +32,7 @@ const DestinationDetail: React.FC = () => {
 
   if (!destination) {
     return (
-      <div className="min-h-screen pt-20 flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="text-center animate-bounce-in">
           <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full flex items-center justify-center">
             <MapPin className="h-16 w-16 text-blue-600" />
@@ -58,29 +58,27 @@ const DestinationDetail: React.FC = () => {
   const mainImage = destination.image;
 
   return (
-    <div className="min-h-screen pt-20 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0]">
+    <div className="min-h-screen bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0]">
       {/* Hero Section */}
-  <div className="relative h-[500px] overflow-hidden rounded-b-3xl shadow-2xl border-b-4 border-yellow-100">
-  <img
-    src={mainImage}
-    alt={destination.name}
-    className="w-full h-full object-cover"
-  />
+      <div className="relative h-[500px] overflow-hidden rounded-b-3xl shadow-2xl border-b-4 border-yellow-100 pt-24">
+        <img
+          src={mainImage}
+          alt={destination.name}
+          className="w-full h-full object-cover"
+        />
 
-  {/* Remove dark overlays and use subtle vibrant gradient highlight only at the bottom */}
-  <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/0 to-white/10 pointer-events-none" />
+        {/* Remove dark overlays and use subtle vibrant gradient highlight only at the bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/0 to-white/10 pointer-events-none" />
 
-  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-    <h1 className="text-5xl font-extrabold mb-3 font-serif tracking-tight text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.3)]">
-      {destination.name}
-    </h1>
-    <p className="text-lg max-w-2xl text-white font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
-      {destination.description}
-    </p>
-  </div>
-</div>
-
-
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+          <h1 className="text-5xl font-extrabold mb-3 font-serif tracking-tight text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.3)]">
+            {destination.name}
+          </h1>
+          <p className="text-lg max-w-2xl text-white font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+            {destination.description}
+          </p>
+        </div>
+      </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:flex lg:space-x-8">

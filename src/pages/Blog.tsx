@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 const Blog: React.FC = () => {
   return (
     <motion.div
-      className="min-h-screen pt-20"
+      className="min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       {/* Header */}
       <motion.section
-        className="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white py-16"
+        className="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white py-16 pt-24"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}

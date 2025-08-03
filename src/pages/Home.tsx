@@ -170,12 +170,7 @@ const Home: React.FC = () => {
         </div>
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80"></div>
-        <div className="relative z-20 text-center text-white max-w-5xl mx-auto px-4">
-          {/* Trust Badge */}
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-400/20 to-blue-600/10 backdrop-blur-sm border border-blue-400/30 text-blue-200 px-6 py-3 rounded-full text-sm font-medium mb-8 shadow-lg">
-            <CheckCircle className="h-4 w-4 text-blue-400" />
-            <span>Trusted by 10,000+ Travelers</span>
-          </div>
+        <div className="relative z-20 text-center text-white max-w-5xl mx-auto px-4 pt-20">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight font-serif">
             <span className="block text-white text-shadow">Your Next</span>
             <span
@@ -210,17 +205,18 @@ const Home: React.FC = () => {
               </Link>
             </div>
             <a
-  href="https://www.youtube.com/watch?v=LZ0BqgsYEIg"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="group flex items-center space-x-3 text-white hover:text-blue-300 transition-all duration-500"
->
-  <div className="w-16 h-16 bg-white/10 backdrop-blur-sm border border-blue-400/30 rounded-full flex items-center justify-center group-hover:bg-blue-400/20 transition-all duration-500 shadow-lg">
-    <Play className="h-6 w-6 ml-1" />
-  </div>
-  <span className="text-lg font-medium font-serif">Watch Our Story</span>
-</a>
-
+              href="https://www.youtube.com/watch?v=LZ0BqgsYEIg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center space-x-3 text-white hover:text-blue-300 transition-all duration-500"
+            >
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm border border-blue-400/30 rounded-full flex items-center justify-center group-hover:bg-blue-400/20 transition-all duration-500 shadow-lg">
+                <Play className="h-6 w-6 ml-1" />
+              </div>
+              <span className="text-lg font-medium font-serif">
+                Watch Our Story
+              </span>
+            </a>
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
