@@ -149,7 +149,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         {/* Background Images Carousel */}
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
@@ -163,13 +163,13 @@ const Home: React.FC = () => {
                 src={image}
                 alt={`Hero ${index + 1}`}
                 className="w-full h-full object-cover object-center rounded-none"
-                style={{ filter: "brightness(0.7) blur(1px)" }}
+                style={{ filter: "brightness(1.05) saturate(1.2)" }}
               />
             </div>
           ))}
         </div>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80"></div>
+
+        {/* Main Content */}
         <div className="relative z-20 text-center text-white max-w-5xl mx-auto px-4 pt-20">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight font-serif">
             <span className="block text-white text-shadow">Your Next</span>
@@ -179,7 +179,8 @@ const Home: React.FC = () => {
               } ${gradientClasses[currentWordIndex]}`}
               style={{
                 backgroundImage:
-                  "linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #1e40af 100%)",
+  "linear-gradient(90deg, #facc15 0%, #fbbf24 50%, #f59e0b 100%)",
+
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -188,17 +189,19 @@ const Home: React.FC = () => {
             </span>
             <span className="block text-white text-shadow">Starts Here</span>
           </h1>
+
           <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed font-light text-shadow text-gray-200">
             Discover breathtaking destinations, create unforgettable memories,
             and experience the world like never before with our expertly curated
             travel packages
           </p>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <div>
               <Link
                 to="/indian-trips"
-                className="group relative bg-gradient-to-r from-blue-400 to-blue-600 text-white px-12 py-5 rounded-2xl text-lg font-bold hover:from-blue-500 hover:to-blue-700 transition-all duration-500 transform hover:scale-105 shadow-xl flex items-center space-x-3 overflow-hidden border-2 border-blue-300"
+                className="group relative bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-12 py-5 rounded-2xl text-lg font-bold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-500 transform hover:scale-105 shadow-xl flex items-center space-x-3 overflow-hidden border-2 border-yellow-300"
               >
                 <span>Explore Destinations</span>
                 <ArrowRight className="h-5 w-5 transition-transform duration-500 group-hover:translate-x-2" />
@@ -218,6 +221,7 @@ const Home: React.FC = () => {
               </span>
             </a>
           </div>
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
@@ -242,7 +246,7 @@ const Home: React.FC = () => {
                   key={index}
                   className="text-center bg-gradient-to-br from-white/10 to-blue-100/10 backdrop-blur-sm border border-blue-400/10 rounded-2xl p-6 hover:bg-blue-100/10 transition-all duration-500 hover:scale-105 shadow-lg"
                 >
-                  <Icon className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+                  <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-3" />
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2 font-serif">
                     {"number" in stat ? (
                       <CountUp
@@ -262,6 +266,7 @@ const Home: React.FC = () => {
             })}
           </div>
         </div>
+
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
           {heroImages.map((_, index) => (
