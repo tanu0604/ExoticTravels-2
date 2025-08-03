@@ -28,7 +28,6 @@ const DestinationDetail: React.FC = () => {
   const destination = destinations.find(
     (dest) => dest.id === id && dest.category === category
   );
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("overview");
 
   if (!destination) {
@@ -56,51 +55,32 @@ const DestinationDetail: React.FC = () => {
     );
   }
 
-  const allImages = [destination.image, ...destination.gallery];
+  const mainImage = destination.image;
 
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0]">
       {/* Hero Section */}
-      <div className="relative h-[500px] overflow-hidden rounded-b-3xl shadow-2xl border-b-4 border-yellow-100">
-        <img
-          src={allImages[selectedImageIndex]}
-          alt={destination.name}
-          className="w-full h-full object-cover transition-all duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-          <h1 className="text-5xl font-black drop-shadow-lg mb-3 font-serif tracking-tight">
-            {destination.name}
-          </h1>
-          <p className="text-lg opacity-90 max-w-2xl drop-shadow-md text-yellow-100 font-light">
-            {destination.description}
-          </p>
-        </div>
-        {allImages.length > 1 && (
-          <>
-            <button
-              onClick={() =>
-                setSelectedImageIndex((prev) =>
-                  prev === 0 ? allImages.length - 1 : prev - 1
-                )
-              }
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-yellow-100 text-gray-700 p-2 rounded-full shadow border-2 border-yellow-300"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() =>
-                setSelectedImageIndex((prev) =>
-                  prev === allImages.length - 1 ? 0 : prev + 1
-                )
-              }
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-yellow-100 text-gray-700 p-2 rounded-full shadow border-2 border-yellow-300"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </>
-        )}
-      </div>
+  <div className="relative h-[500px] overflow-hidden rounded-b-3xl shadow-2xl border-b-4 border-yellow-100">
+  <img
+    src={mainImage}
+    alt={destination.name}
+    className="w-full h-full object-cover"
+  />
+
+  {/* Remove dark overlays and use subtle vibrant gradient highlight only at the bottom */}
+  <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/0 to-white/10 pointer-events-none" />
+
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+    <h1 className="text-5xl font-extrabold mb-3 font-serif tracking-tight text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.3)]">
+      {destination.name}
+    </h1>
+    <p className="text-lg max-w-2xl text-white font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]">
+      {destination.description}
+    </p>
+  </div>
+</div>
+
+
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:flex lg:space-x-8">
@@ -276,7 +256,10 @@ const DestinationDetail: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  <button  onClick={() => window.location.href = '/contact'} className="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white py-2 rounded-lg font-bold border-2 border-blue-400 transition">
+                  <button
+                    onClick={() => (window.location.href = "/contact")}
+                    className="w-full bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white py-2 rounded-lg font-bold border-2 border-blue-400 transition"
+                  >
                     Book Now
                   </button>
                 </div>
