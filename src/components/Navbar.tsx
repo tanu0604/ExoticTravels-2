@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import logo from "../logo/logo.jpg";
+
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,7 +10,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,35 +30,48 @@ const Navbar: React.FC = () => {
 
   return (
     <>
- {/* Scrolling Banner */}
- 
-
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg"
-            : "bg-white/90 backdrop-blur-sm shadow-md"
+            ? "bg-white/95 backdrop-blur-md shadow-xl border-b border-white/20"
+            : "bg-transparent backdrop-blur-none"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-6">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-4 group">
               <img
                 src={logo}
                 alt="Exotic Travels Logo"
-                className="h-14 w-auto rounded-full max-h-16 transition-transform duration-300 group-hover:scale-105"
+                className={`w-auto rounded-full max-h-16 transition-all duration-500 group-hover:scale-105 ${
+                  isScrolled ? "h-12" : "h-16"
+                } shadow-lg ring-2 ring-white/30`}
               />
               <div className="hidden sm:block">
-                <div className="text-2xl font-bold leading-tight">
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className={`font-bold leading-tight transition-all duration-500 ${
+                  isScrolled ? "text-xl" : "text-2xl"
+                }`}>
+                  <span className={`bg-gradient-to-r bg-clip-text text-transparent transition-all duration-500 ${
+                    isScrolled 
+                      ? "from-blue-600 to-purple-600" 
+                      : "from-blue-300 via-white to-blue-200 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                  }`}>
                     Exotic
                   </span>
-                  <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent ml-1">
+                  <span className={`bg-gradient-to-r bg-clip-text text-transparent ml-1 transition-all duration-500 ${
+                    isScrolled 
+                      ? "from-amber-500 to-orange-500" 
+                      : "from-amber-300 via-yellow-200 to-amber-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                  }`}>
                     Travels
                   </span>
                 </div>
-                <div className="text-sm text-gray-500 font-medium">
+                <div className={`font-medium transition-all duration-500 ${
+                  isScrolled 
+                    ? "text-sm text-gray-500" 
+                    : "text-sm text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+                }`}>
                   Your Dream… our destination!
                 </div>
               </div>
@@ -69,24 +83,42 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`nav-link ${
-                    isActive(item.path) ? "active text-blue-600" : ""
+                  className={`relative font-semibold transition-all duration-300 hover:scale-105 ${
+                    isScrolled
+                      ? `nav-link ${isActive(item.path) ? "active text-blue-600" : "text-gray-700 hover:text-blue-600"}`
+                      : `${
+                          isActive(item.path) 
+                            ? "text-blue-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" 
+                            : "text-white hover:text-blue-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                        }`
                   }`}
                 >
                   {item.name}
+                  {/* Active indicator for transparent state */}
+                  {!isScrolled && isActive(item.path) && (
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-blue-300 rounded-full shadow-lg"></div>
+                  )}
                 </Link>
               ))}
             </div>
 
             {/* Contact Info & CTA */}
             <div className="hidden lg:flex items-center space-x-6">
-              <div className="flex items-center space-x-2 text-gray-600">
+              <div className={`flex items-center space-x-2 transition-all duration-300 ${
+                isScrolled 
+                  ? "text-gray-600" 
+                  : "text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+              }`}>
                 <Phone className="h-4 w-4" />
                 <span className="font-medium">+91 90880 19480</span>
               </div>
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
+                  isScrolled
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
+                    : "bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 hover:bg-white/30 hover:border-white/50 drop-shadow-lg"
+                }`}
               >
                 Get Quote
               </Link>
@@ -94,7 +126,11 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+              className={`md:hidden p-2 rounded-lg transition-all duration-300 ${
+                isScrolled
+                  ? "hover:bg-gray-100 text-gray-700"
+                  : "hover:bg-white/20 text-white backdrop-blur-sm"
+              }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? (
@@ -108,16 +144,24 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg">
+          <div className={`md:hidden backdrop-blur-md border-t shadow-lg transition-all duration-300 ${
+            isScrolled
+              ? "bg-white/95 border-gray-100"
+              : "bg-black/30 border-white/20"
+          }`}>
             <div className="px-4 pt-4 pb-6 space-y-3">
               {menuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`block px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200 ${
+                  className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
                     isActive(item.path)
-                      ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? isScrolled
+                        ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600"
+                        : "text-blue-300 bg-white/10 border-l-4 border-blue-300"
+                      : isScrolled
+                        ? "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                        : "text-white hover:text-blue-300 hover:bg-white/10"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -127,13 +171,19 @@ const Navbar: React.FC = () => {
 
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-gray-200">
-                <div className="flex items-center space-x-2 px-4 py-2 text-gray-600">
+                <div className={`flex items-center space-x-2 px-4 py-2 transition-colors duration-300 ${
+                  isScrolled ? "text-gray-600" : "text-white/90"
+                }`}>
                   <Phone className="h-4 w-4" />
                   <span className="font-medium">+91 90880 19480</span>
                 </div>
                 <Link
                   to="/contact"
-                  className="block mx-4 mt-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
+                  className={`block mx-4 mt-3 text-center py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300 ${
+                    isScrolled
+                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+                      : "bg-white/20 backdrop-blur-sm text-white border border-white/30"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Free Quote
@@ -164,7 +214,6 @@ const Navbar: React.FC = () => {
           </div>
         </a>
       </div>
-
     </>
   );
 };
