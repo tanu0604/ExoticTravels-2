@@ -108,39 +108,62 @@ const About: React.FC = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] border-b border-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
-              Why Choose Exotic Travels?
-            </h2>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              With over 10 years of experience and thousands of satisfied
-              customers, here's what makes us special
-            </p>
-          </div>
+     {/* Why Choose Us */}
+<section className="py-16 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] border-b border-blue-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4 font-serif">
+        Why Choose Exotic Travels?
+      </h2>
+      <p className="text-gray-700 max-w-2xl mx-auto">
+        With over 10 years of experience and thousands of satisfied
+        customers, here's what makes us special
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="text-center bg-white rounded-2xl shadow-xl border border-blue-100 p-8"
-              >
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8 text-blue-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">
-                  Expert Planning
-                </h3>
-                <p className="text-gray-700">
-                  Our experienced travel consultants craft personalized
-                  itineraries based on your preferences and budget.
-                </p>
-              </div>
-            ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {[
+        {
+          title: "Expert Planning",
+          desc: "Our experienced travel consultants craft personalized itineraries based on your preferences and budget.",
+        },
+        {
+          title: "24/7 Support",
+          desc: "Round-the-clock assistance ensures you're never alone during your journey, wherever you are.",
+        },
+        {
+          title: "10,000+ Happy Customers",
+          desc: "Join thousands of satisfied travelers who have trusted us with their dream vacations.",
+        },
+        {
+          title: "200+ Destinations",
+          desc: "Extensive network covering popular and offbeat destinations across India and internationally.",
+        },
+        {
+          title: "Best Price Guarantee",
+          desc: "Competitive pricing with no hidden charges. We offer the best value for your money.",
+        },
+        {
+          title: "Personalized Service",
+          desc: "Every trip is customized to match your interests, ensuring a unique and memorable experience.",
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="text-center bg-white rounded-2xl shadow-xl border border-blue-100 p-8"
+        >
+          <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Award className="h-8 w-8 text-blue-500" />
           </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif">
+            {item.title}
+          </h3>
+          <p className="text-gray-700">{item.desc}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Statistics */}
       <section className="py-16 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white border-b border-blue-100">
