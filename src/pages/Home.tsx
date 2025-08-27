@@ -150,6 +150,7 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+                <div className="absolute inset-0 bg-black/40 z-10"></div>
         {/* Background Images Carousel */}
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
