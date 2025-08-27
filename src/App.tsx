@@ -1,0 +1,43 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
+import Home from "./pages/Home";
+import IndianTrips from "./pages/IndianTrips";
+import ForeignTrips from "./pages/ForeignTrips";
+import DestinationDetail from "./pages/DestinationDetail";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <div className="min-h-screen m-0 p-0">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/indian-trips" element={<IndianTrips />} />
+          <Route path="/foreign-trips" element={<ForeignTrips />} />
+
+          {/* ✅ Updated to match the new Link in DestinationCard */}
+          <Route path="/indian/:id" element={<DestinationDetail />} />
+          <Route path="/foreign/:id" element={<DestinationDetail />} />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+        <BackToTop />
+      </div>
+    </Router>
+  );
+}
+
+export default App;

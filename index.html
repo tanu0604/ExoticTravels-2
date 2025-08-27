@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="src/logo/logo.jpg" type="image/jpeg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description"
+    content="Exotic Travels - Your trusted partner for unforgettable travel experiences across India and around the world. Based in Kolkata, we offer curated Indian and International travel packages." />
+  <meta name="keywords"
+    content="travel, tourism, India tours, international tours, Kolkata travel agency, vacation packages, holiday packages" />
+  <meta name="author" content="Exotic Travels" />
+
+  <!-- ✅ Open Graph Tags -->
+  <meta property="og:title" content="Exotic Travels - Explore India & Beyond" />
+  <meta property="og:description"
+    content="Discover incredible destinations with our curated travel packages. From Indian hill stations to international beaches, create memories that last a lifetime." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exotictravels.com" />
+
+  <title>Exotic Travels - Explore India & Beyond | Kolkata Travel Agency</title>
+
+  <!-- ✅ Custom Style for Voiceglow Launcher -->
+  <style>
+    .vg-launcher__button img {
+      width: 180px !important;        /* 🔁 Adjust as needed */
+      height: 180px !important;
+      border-radius: 50%;            /* Optional: makes it circular */
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- ✅ Updated Voiceglow Chatbot Code -->
+  <div style="width: 0; height: 0;" id="VG_OVERLAY_CONTAINER">
+    <!-- Here is where CONVOCORE renders the widget. -->
+    <!-- Set render to 'full-width' then adjust the width and height to 500px (for example) to render the chatbot itself without the popup. -->
+  </div>
+
+  <!-- Remove 'defer' if you want widget to load faster (Will affect website loading) -->
+  <script defer>
+    (function () {
+      window.VG_CONFIG = {
+        ID: "ELETUawRwoxMaokivIxF", // YOUR AGENT ID
+        region: 'na', // YOUR ACCOUNT REGION 
+        render: 'bottom-left', // Widget position
+        // modalMode: true, // Set this to 'true' to open the widget in modal mode
+        stylesheets: [
+          "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css"
+        ],
+        // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
+        // user: {
+        //     name: 'John Doe',
+        //     email: 'johndoe@gmail.com',
+        //     phone: '+1234567890',
+        // }
+        // Optional user data -- end
+        // **
+        // userID: 'USER_ID',
+        // autostart: true,
+      };
+      var VG_SCRIPT = document.createElement("script");
+      VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+      VG_SCRIPT.defer = true;
+      document.body.appendChild(VG_SCRIPT);
+    })();
+  </script>
+
+  <!-- ✅ React App Entry -->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
